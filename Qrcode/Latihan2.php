@@ -36,7 +36,8 @@
 						include "php-qrcode/qrlib.php"; 
 						/*create folder*/
 						$tempdir="qr_tmp/";
-						if (!file_exists($tempdir)) mkdir($tempdir, 0755);
+						if (!file_exists($tempdir)) //jika folder tidak ada maka buat
+							mkdir($tempdir, 0755);
 						$file_name=date("Ymd")."_".$code.".png";	
 						$file_path = $tempdir.$file_name;
 						
